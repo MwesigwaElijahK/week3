@@ -9,18 +9,14 @@ def list_sort(list1):
     for x in list1:
         if isinstance (x, int):
             if x % 2 == 0:
-               even.append(x) 
+               even.append(x)
+               even.sort() 
             else:
                 odd.append(x)
-
-        
+                odd.sort() 
         elif isinstance (x, str):
             char.append(x)
+            char.sort()
+    return {'evens': even, 'odd': odd, 'char': char, }
 
-
-    print("even:", even)
-    print("odd:", odd)
-    print("char:", char)
-    return(mydict)
-
-list_sort(list1)
+print(list_sort(list1))
